@@ -10,7 +10,7 @@ void swap(int *xp, int *yp)
     *yp = temp;
 }
 
-// An optimized version of Bubble Sort
+// An optimized version of Bubble Sort learned in Discrete Mathematics
 void bubbleSort(int arr[], int n)
 {
     int i, j;
@@ -44,10 +44,20 @@ void printArray(int arr[], int size)
 // Driver program to test above functions
 int main()
 {
-    int arr[] = {60, 37, 22, 11, 24, 134, 90};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    bubbleSort(arr, n);
+    int arr[10] = {};
+    int arrSize = sizeof(arr)/sizeof(arr[0]); // Size of the array
+    
+    
+    cout << "Please enter "<< arrSize << " numbers to sort (:" << endl;
+    
+    for (int i = 0; i < arrSize ; i++) {
+        cout << i+1 << ": ";
+        cin >> arr[i];
+    }
+    
+    
+    bubbleSort(arr, arrSize);
     cout <<"Sorted array: \n";
-    printArray(arr, n);
+    printArray(arr, arrSize);
     return 0;
 }
