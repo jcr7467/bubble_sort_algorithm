@@ -44,10 +44,13 @@ void printArray(int arr[], int size)
 // Driver program to test above functions
 int main()
 {
+    
+    
+    int arrSize;
     int arr[10] = {};
-    int arrSize = sizeof(arr)/sizeof(arr[0]); // Size of the array
     
-    
+    cout << "How many numbers would you like sorted? \nEnter: ";
+    cin >> arrSize;    
     cout << "Please enter "<< arrSize << " numbers to sort (:" << endl;
     
     for (int i = 0; i < arrSize ; i++) {
